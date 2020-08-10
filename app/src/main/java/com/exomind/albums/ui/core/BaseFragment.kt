@@ -47,16 +47,6 @@ abstract class BaseFragment<T : BaseViewModel>(
                 )
             }
         })
-
-        viewModel.graphNavigationCommands.observe(this, Observer { graphDirectionsWrapper ->
-            when (graphDirectionsWrapper) {
-                is GraphNav -> findNavController().navigate(graphDirectionsWrapper.graphId)
-                is GraphNavWithExtras -> findNavController().navigate(
-                    graphDirectionsWrapper.graphId,
-                    graphDirectionsWrapper.args
-                )
-            }
-        })
     }
 
     private fun getAppViewModelFactory(): AppViewModelFactory =
