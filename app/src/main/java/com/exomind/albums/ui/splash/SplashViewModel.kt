@@ -1,8 +1,8 @@
 package com.exomind.albums.ui.splash
 
 import androidx.lifecycle.LiveData
-import com.transdev.mobime.presentation.coreview.BaseViewModel
-import com.transdev.mobime.presentation.coreview.SingleLiveEvent
+import com.exomind.albums.presentation.coreview.BaseViewModel
+import com.exomind.albums.presentation.coreview.SingleLiveEvent
 import io.reactivex.Single
 import io.reactivex.functions.Consumer
 import java.util.concurrent.TimeUnit

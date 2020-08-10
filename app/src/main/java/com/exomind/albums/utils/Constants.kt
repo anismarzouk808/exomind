@@ -1,4 +1,4 @@
-package com.transdev.mobime.misc
+package com.exomind.albums.misc
 
 object Constants {
 

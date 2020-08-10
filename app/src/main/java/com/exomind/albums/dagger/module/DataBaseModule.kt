@@ -1,5 +1,6 @@
 package com.exomind.albums.dagger.module
 
+import android.content.Context
 import androidx.room.Room
 import com.exomind.albums.AlbumsApplication
 import com.exomind.albums.data.persistance.AppDatabase
@@ -15,9 +16,9 @@ class DataBaseModule {
 
     @Provides
     @Singleton
-    fun provideAppDatabase(application: AlbumsApplication): AppDatabase {
+    fun provideAppDatabase(context: Context): AppDatabase {
         return Room
-            .databaseBuilder(application, AppDatabase::class.java, AppDatabase.DB_NAME)
+            .databaseBuilder(context, AppDatabase::class.java, AppDatabase.DB_NAME)
             .build()
     }
 

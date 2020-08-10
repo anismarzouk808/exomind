@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.exomind.albums.R
 import com.exomind.albums.ui.main.users.UsersViewModel
-import com.transdev.mobime.presentation.coreview.BaseFragment
+import com.exomind.albums.presentation.coreview.BaseFragment
 
 class AlbumsFragment : BaseFragment<AlbumViewModel>(
     AlbumViewModel::class,

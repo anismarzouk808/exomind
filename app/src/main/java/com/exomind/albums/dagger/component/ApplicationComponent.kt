@@ -1,7 +1,7 @@
-package com.transdev.mobime.dagger.component
+package com.exomind.albums.dagger.component
 
 import android.app.Application
-import com.amneils.bostagi.dagger.module.*
+import com.exomind.albums.dagger.module.*
 import com.exomind.albums.AlbumsApplication
 import com.exomind.albums.dagger.module.DataBaseModule
 import com.exomind.albums.dagger.module.ViewModelModule

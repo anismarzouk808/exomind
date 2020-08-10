@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "photos")
-data class Photo (
+data class PhotoDto (
     @SerializedName("id")
     @PrimaryKey
     val id : Int? = null,

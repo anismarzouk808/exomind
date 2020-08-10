@@ -2,8 +2,7 @@ package com.exomind.albums.dagger.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.amneils.bostagi.dagger.factory.AppViewModelFactory
-import com.amneils.bostagi.ui.main.MainViewModel
+import com.exomind.albums.dagger.factory.AppViewModelFactory
 import com.exomind.albums.dagger.annotation.ViewModelKey
 import com.exomind.albums.ui.main.albums.AlbumViewModel
 import com.exomind.albums.ui.main.albumsphotos.AlbumPhotosViewModel
@@ -18,11 +17,6 @@ internal abstract class ViewModelModule {
 
     @Binds
     internal abstract fun bindViewModelFactory(appViewModelFactory: AppViewModelFactory): ViewModelProvider.Factory
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(MainViewModel::class)
-    internal abstract fun provideMainViewModel(mainViewModel: MainViewModel): ViewModel
 
     @Binds
     @IntoMap

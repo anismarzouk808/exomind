@@ -5,14 +5,15 @@ import androidx.lifecycle.Observer
 import com.exomind.albums.R
 import com.exomind.albums.ui.main.MainActivity
 import com.exomind.albums.utils.extension.navigateTo
-import com.transdev.mobime.misc.extension.vm
-import com.transdev.mobime.presentation.coreview.BaseActivity
+import com.exomind.albums.misc.extension.vm
+import com.exomind.albums.presentation.coreview.BaseActivity
 
 class SplashActivity : BaseActivity(R.layout.splash_activity){
     private val viewModel by lazy { vm(viewModelFactory, SplashViewModel::class) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         observeLiveData()
     }
 

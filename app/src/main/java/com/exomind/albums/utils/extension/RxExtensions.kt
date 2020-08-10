@@ -1,4 +1,4 @@
-package com.transdev.mobime.misc.extension
+package com.exomind.albums.misc.extension
 
 import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers

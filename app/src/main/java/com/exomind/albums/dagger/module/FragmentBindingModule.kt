@@ -1,4 +1,4 @@
-package com.amneils.bostagi.dagger.module
+package com.exomind.albums.dagger.module
 
 import com.exomind.albums.ui.main.albums.AlbumsFragment
 import com.exomind.albums.ui.main.albumsphotos.AlbumPhotosFragment

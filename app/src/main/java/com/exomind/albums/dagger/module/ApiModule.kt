@@ -1,8 +1,8 @@
-package com.amneils.bostagi.dagger.module
+package com.exomind.albums.dagger.module
 
-import com.amneils.bostagi.services.providers.specificexampleApi.AlbumsApiProvider
-import com.amneils.bostagi.services.providers.specificexampleApi.AlbumsApiService
-import com.amneils.bostagi.services.providers.specificexampleApi.IAlbumsApiProvider
+import com.exomind.albums.services.providers.specificexampleApi.AlbumsApiProvider
+import com.exomind.albums.services.providers.specificexampleApi.AlbumsApiService
+import com.exomind.albums.services.providers.specificexampleApi.IAlbumsApiProvider
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
