@@ -1,0 +1,28 @@
+package com.transdev.mobime.misc.extension
+
+import android.app.Activity
+import android.content.Context
+import android.os.Parcel
+import android.os.Parcelable
+import android.util.Patterns
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import androidx.annotation.ColorRes
+import androidx.annotation.LayoutRes
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.MutableLiveData
+import com.transdev.mobime.presentation.coreview.DataWrapper
+import com.transdev.mobime.presentation.coreview.Loading
+import java.util.*
+
+fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false): View {
+  return LayoutInflater.from(context).inflate(layoutRes, this, attachToRoot)
+}
+
+fun <T> MutableLiveData<DataWrapper<T>>.setLoadingState(loading: Boolean) {
+  this.value = Loading(loading)
+}

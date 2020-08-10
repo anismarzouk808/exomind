@@ -1,0 +1,14 @@
+ext.versions = [
+        'gradle'  : '4.0.1',
+        'dagger'  : '2.27',
+        'kotlin'  : '1.3.72',
+        'retrofit': '2.8.1',
+        'okHttp'  : '3.12.8',
+        'timber'  : '4.7.1',
+        'rxjava'  : '2.2.19',
+        'rxAndroid'  : '2.1.1',
+        'stetho'  : '1.5.1',
+        'navigation'  : '2.2.0-beta01',
+        'navigation'  : '2.2.0-beta01',
+        'room'  : '2.2.5'
+]
