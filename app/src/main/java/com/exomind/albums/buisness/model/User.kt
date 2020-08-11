@@ -1,7 +1,7 @@
 package com.exomind.albums.buisness.model
 
 data class User(
-    val id: Int,
+    val id: Int = 0,
     val name: String,
     val pseudo: String,
     val email: String,

@@ -1,4 +1,4 @@
-package com.amneils.bostagi.dagger.factory
+package com.exomind.albums.dagger.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -1,3 +1,3 @@
-package com.transdev.mobime.presentation.coreview
+package com.exomind.albums.presentation.coreview
 
 interface ErrorType

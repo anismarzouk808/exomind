@@ -1,4 +1,4 @@
-package com.amneils.bostagi.dagger.module
+package com.exomind.albums.dagger.module
 
 import android.app.Application
 import android.content.Context

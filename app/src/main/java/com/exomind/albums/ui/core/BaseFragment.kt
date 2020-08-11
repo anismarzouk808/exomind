@@ -1,5 +1,6 @@
-package com.transdev.mobime.presentation.coreview
+package com.exomind.albums.presentation.coreview
 
+import android.icu.text.CaseMap
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +8,9 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.amneils.bostagi.dagger.factory.AppViewModelFactory
+import com.exomind.albums.dagger.factory.AppViewModelFactory
 import com.exomind.albums.ui.main.MainActivity
-import com.transdev.mobime.misc.extension.vm
+import com.exomind.albums.misc.extension.vm
 import dagger.android.support.DaggerFragment
 import kotlin.reflect.KClass
 
@@ -52,8 +53,16 @@ abstract class BaseFragment<T : BaseViewModel>(
     private fun getAppViewModelFactory(): AppViewModelFactory =
         (activity as BaseActivity).viewModelFactory
 
-    protected open fun toggleLoading(loading: Boolean) {
+    fun toggleLoading(loading: Boolean) {
         if (activity is MainActivity) (activity as BaseActivity).toggleLoading(loading)
+    }
+
+    fun showError(show : Boolean, errorMsg : String?){
+        if (activity is MainActivity) (activity as BaseActivity).showError(show,errorMsg)
+    }
+
+    fun setToolbarTitle(title: String){
+        if (activity is MainActivity) (activity as BaseActivity).setToolbarTitle(title)
     }
 }
 

@@ -1,4 +1,4 @@
-package com.transdev.mobime.presentation.coreview
+package com.exomind.albums.presentation.coreview
 
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigator

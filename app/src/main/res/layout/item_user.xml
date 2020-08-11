@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="left"
+        android:textSize="20sp"
+        tools:text="Anis MARZOUK"
+        android:typeface="serif"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_pseudo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_txt"
+        app:srcCompat="@drawable/ic_user_24"
+        />
+
+    <TextView
+        android:id="@+id/pseudo_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_pseudo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_pseudo"
+        app:layout_constraintTop_toTopOf="@+id/ic_pseudo"
+        tools:text="anismarzouk"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_pseudo"
+        app:srcCompat="@drawable/ic_phone_24"
+        />
+
+    <TextView
+        android:id="@+id/phone_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_phone"
+        app:layout_constraintTop_toTopOf="@+id/ic_phone"
+        tools:text="0147034467"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_phone"
+        app:srcCompat="@drawable/ic_email_24"
+        />
+
+    <TextView
+        android:id="@+id/email_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_email"
+        app:layout_constraintTop_toTopOf="@+id/ic_email"
+        tools:text="anismarzouk808@gmail.com"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_email"
+        app:srcCompat="@drawable/ic_website_24"
+        />
+
+    <TextView
+        android:id="@+id/website_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_website"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_website"
+        app:layout_constraintTop_toTopOf="@+id/ic_website"
+        tools:text="google.com"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

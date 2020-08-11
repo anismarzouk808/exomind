@@ -1,4 +1,4 @@
-package com.amneils.bostagi.dagger.module
+package com.exomind.albums.dagger.module
 
 import com.exomind.albums.BuildConfig
 import com.exomind.albums.dagger.annotation.AlbumsBaseApi
