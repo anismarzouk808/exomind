@@ -60,8 +60,8 @@ abstract class BaseFragment<T : BaseViewModel>(
         if (activity is MainActivity) (activity as BaseActivity).toggleError(show,errorMsg)
     }
 
-    fun setToolbarTitle(title: String){
-        if (activity is MainActivity) (activity as BaseActivity).setToolbarTitle(title)
+    fun setToolbarTitle(title : String, showBack : Boolean){
+        if (activity is MainActivity) (activity as BaseActivity).setToolbarTitle(title,showBack)
     }
 }
 

@@ -1,5 +1,6 @@
 package com.exomind.albums.presentation.coreview
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -42,7 +43,8 @@ abstract class BaseActivity(
     errorTxt?.text = errorMsg ?: resources.getString(R.string.default_error_message)
   }
 
-  fun setToolbarTitle(title : String){
+  fun setToolbarTitle(title : String, showBack : Boolean){
     supportActionBar?.title = title
+    supportActionBar?.setDisplayHomeAsUpEnabled(showBack)
   }
 }

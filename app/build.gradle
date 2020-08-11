@@ -93,4 +93,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$versions.room"
     implementation "androidx.room:room-rxjava2:$versions.room"
 
+    //Coil
+    implementation "io.coil-kt:coil:$versions.coil"
+
 }

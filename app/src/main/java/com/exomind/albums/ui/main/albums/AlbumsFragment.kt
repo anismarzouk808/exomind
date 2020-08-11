@@ -25,11 +25,11 @@ class AlbumsFragment : BaseFragment<AlbumViewModel>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindToNavigationCommands(viewModel)
-        setToolbarTitle(resources.getString(R.string.albums_title))
+        setToolbarTitle(args.user.name,true)
         intiView()
         setUpRecycleView()
         observeData()
-        viewModel.loadAlbums(args.userId)
+        viewModel.loadAlbums(args.user.id)
     }
 
     private fun intiView() {
@@ -41,7 +41,7 @@ class AlbumsFragment : BaseFragment<AlbumViewModel>(
         val spacing = resources.getDimension(R.dimen.album_list_spacing).toInt()
         albumList.addItemDecoration(AlbumsItemDecoration(spacing))
         albumsAdapter.itemClickListener = {
-            viewModel.navigateToAlbumsPhoto(it.id)
+            viewModel.navigateToAlbumsPhoto(it)
         }
         albumList.adapter = albumsAdapter
     }

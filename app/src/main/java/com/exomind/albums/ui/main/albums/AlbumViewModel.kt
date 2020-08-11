@@ -9,7 +9,6 @@ import com.exomind.albums.presentation.coreview.BaseViewModel
 import com.exomind.albums.presentation.coreview.DataWrapper
 import com.exomind.albums.presentation.coreview.Failure
 import com.exomind.albums.presentation.coreview.Success
-import com.exomind.albums.ui.main.users.UsersFragmentDirections
 import com.exomind.albums.ui.main.users.UsersViewModel
 import io.reactivex.functions.Consumer
 import javax.inject.Inject
@@ -35,7 +34,7 @@ class AlbumViewModel @Inject constructor(private val dataManager: IAlbumsDataMan
         )
     }
 
-    fun navigateToAlbumsPhoto(albumId : Int){
-        navigate(AlbumsFragmentDirections.actionAlbumsFragmentToAlbumPhotosFragment(albumId))
+    fun navigateToAlbumsPhoto(album : Album){
+        navigate(AlbumsFragmentDirections.actionAlbumsFragmentToAlbumPhotosFragment(album))
     }
 }
