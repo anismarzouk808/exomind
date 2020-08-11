@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.exomind.albums.R
+import com.exomind.albums.misc.extension.hideKeyboard
 import com.exomind.albums.utils.extension.onTextChangedListener
 import com.exomind.albums.presentation.coreview.BaseFragment
 import com.exomind.albums.presentation.coreview.Failure
@@ -43,6 +44,7 @@ class UsersFragment : BaseFragment<UsersViewModel>(
         userList.layoutManager = LinearLayoutManager(context)
         usersAdapter.itemClickListener = {
             viewModel.navigateToAlbums(it.id)
+            activity?.hideKeyboard()
         }
         userList.adapter = usersAdapter
     }
@@ -59,16 +61,15 @@ class UsersFragment : BaseFragment<UsersViewModel>(
                 when (dataWrapper) {
                     is Success -> {
                         usersAdapter.items = dataWrapper.data
-                        showError(false,null)
+                        toggleError(false,null)
                     }
                     is Failure ->{
-                       showError(true,dataWrapper.throwable?.message)
-                        println("errrrrrrorrrr === ${dataWrapper.throwable?.message}")
+                       toggleError(true,dataWrapper.throwable?.message)
                     }
 
                     is Loading -> {
                         toggleLoading(dataWrapper.loading)
-                        showError(false,null)
+                        toggleError(false,null)
                     }
                 }
             })

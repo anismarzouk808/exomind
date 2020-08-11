@@ -1,6 +1,5 @@
 package com.exomind.albums.presentation.coreview
 
-import android.icu.text.CaseMap
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -57,8 +56,8 @@ abstract class BaseFragment<T : BaseViewModel>(
         if (activity is MainActivity) (activity as BaseActivity).toggleLoading(loading)
     }
 
-    fun showError(show : Boolean, errorMsg : String?){
-        if (activity is MainActivity) (activity as BaseActivity).showError(show,errorMsg)
+    fun toggleError(show : Boolean, errorMsg : String?){
+        if (activity is MainActivity) (activity as BaseActivity).toggleError(show,errorMsg)
     }
 
     fun setToolbarTitle(title: String){

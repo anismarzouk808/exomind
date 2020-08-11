@@ -5,4 +5,5 @@
     <string name="search_user_hint">Rechercher un utilisateur</string>
     <string name="default_error_message">une erreur est survenue merci de réessayer plus tard</string>
     <string name="users_title">Utilisateurs</string>
+    <string name="albums_title">Albums</string>
 </resources>
