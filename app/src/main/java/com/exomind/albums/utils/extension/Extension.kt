@@ -30,3 +30,12 @@ fun <T> MutableLiveData<DataWrapper<T>>.setLoadingState(loading: Boolean) {
 }
 
 fun RecyclerView.ViewHolder.getContext() = itemView.context
+
+fun Activity.hideKeyboard(): Boolean {
+  val view = currentFocus
+  view?.let {
+    val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    return inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+  }
+  return false
+}

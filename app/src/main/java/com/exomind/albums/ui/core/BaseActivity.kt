@@ -37,7 +37,7 @@ abstract class BaseActivity(
     loadingView?.visibility = if (isLoading) View.VISIBLE else View.GONE
   }
 
-  fun showError(show : Boolean, errorMsg : String?){
+  fun toggleError(show : Boolean, errorMsg : String?){
     errorView?.visibility = if (show) View.VISIBLE else View.GONE
     errorTxt?.text = errorMsg ?: resources.getString(R.string.default_error_message)
   }
