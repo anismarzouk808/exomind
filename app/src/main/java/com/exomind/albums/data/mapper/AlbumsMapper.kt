@@ -1,8 +1,10 @@
 package com.exomind.albums.data.mapper
 
 import com.exomind.albums.buisness.model.Album
+import com.exomind.albums.buisness.model.Photo
 import com.exomind.albums.buisness.model.User
 import com.exomind.albums.data.model.AlbumDto
+import com.exomind.albums.data.model.PhotoDto
 import com.exomind.albums.data.model.UserDto
 
 class AlbumsMapper {
@@ -53,6 +55,28 @@ class AlbumsMapper {
 
 
     /***map albums ***/
+
+
+    /***map album photos ***/
+
+    private fun mapAlbumPhoto(photoDto: PhotoDto): Photo {
+        return with(photoDto) {
+            Photo(
+                id = id ?: 0,
+                albumId = albumId ?: 0,
+                title = title ?: String(),
+                url = url ?: String(),
+                thumbnailUrl = thumbnailUrl ?: String()
+            )
+        }
+    }
+
+    fun mapAlbumPhoto(photosDto: List<PhotoDto>): List<Photo> {
+        return photosDto.filter { it.url != null && !it.title.isNullOrEmpty() }.map { mapAlbumPhoto(it) }
+    }
+
+
+    /***map album photos ***/
 
 }
 

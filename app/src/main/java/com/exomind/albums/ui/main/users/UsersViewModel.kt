@@ -41,8 +41,8 @@ class UsersViewModel @Inject constructor(private val dataManager: IAlbumsDataMan
         }
     }
 
-    fun navigateToAlbums(userId : Int){
-        navigate(UsersFragmentDirections.actionUsersFragmentToAlbumsFragment(userId))
+    fun navigateToAlbums(user : User){
+        navigate(UsersFragmentDirections.actionUsersFragmentToAlbumsFragment(user))
     }
 
     enum class UserErrorType : ErrorType {

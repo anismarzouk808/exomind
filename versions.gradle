@@ -9,6 +9,6 @@ ext.versions = [
         'rxAndroid'  : '2.1.1',
         'stetho'  : '1.5.1',
         'navigation'  : '2.2.0-beta01',
-        'navigation'  : '2.2.0-beta01',
+        'coil'  : '0.11.0',
         'room'  : '2.2.5'
 ]

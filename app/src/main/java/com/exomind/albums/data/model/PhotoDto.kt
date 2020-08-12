@@ -17,7 +17,7 @@ data class PhotoDto (
     val albumId : Int? = null,
 
     @SerializedName("title")
-    val title : String,
+    val title : String ?= null,
 
     @SerializedName("url")
     val url : String? = null,

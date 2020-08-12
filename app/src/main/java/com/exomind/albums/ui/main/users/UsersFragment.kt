@@ -25,7 +25,7 @@ class UsersFragment : BaseFragment<UsersViewModel>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindToNavigationCommands(viewModel)
-        setToolbarTitle(resources.getString(R.string.users_title))
+        setToolbarTitle(resources.getString(R.string.users_title),false)
         intiView()
         setUpRecyclerView()
         initListeners()
@@ -43,7 +43,7 @@ class UsersFragment : BaseFragment<UsersViewModel>(
     private fun setUpRecyclerView(){
         userList.layoutManager = LinearLayoutManager(context)
         usersAdapter.itemClickListener = {
-            viewModel.navigateToAlbums(it.id)
+            viewModel.navigateToAlbums(it)
             activity?.hideKeyboard()
         }
         userList.adapter = usersAdapter

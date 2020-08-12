@@ -1,6 +1,7 @@
 package com.exomind.albums.data.datamanager
 
 import com.exomind.albums.buisness.model.Album
+import com.exomind.albums.buisness.model.Photo
 import com.exomind.albums.services.providers.specificexampleApi.IAlbumsApiProvider
 import com.exomind.albums.buisness.model.User
 import com.exomind.albums.data.persistance.AppDatabase
@@ -23,9 +24,16 @@ class AlbumsDataManager(
             //save on db
         }
     }
+
+    override fun loadAlbumPhotos(album: Album): Single<List<Photo>> {
+        return provider.getAlbumPhotos(album.userId,album.id).doOnSuccess {
+            //save on Db
+        }
+    }
 }
 
 interface IAlbumsDataManger{
     fun loadUsers() : Single<List<User>>
     fun loadAlbums(userId : Int) : Single<List<Album>>
+    fun loadAlbumPhotos(album: Album) : Single<List<Photo>>
 }

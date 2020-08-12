@@ -23,8 +23,8 @@
             android:id="@+id/action_albumsFragment_to_albumPhotosFragment"
             app:destination="@id/albumPhotosFragment" />
         <argument
-            android:name="userId"
-            app:argType="integer" />
+            android:name="user"
+            app:argType="com.exomind.albums.buisness.model.User" />
     </fragment>
     <fragment
         android:id="@+id/albumPhotosFragment"
@@ -32,8 +32,8 @@
         android:label="fragment_album_photos"
         tools:layout="@layout/fragment_album_photos" >
         <argument
-            android:name="albumId"
-            app:argType="integer" />
+            android:name="album"
+            app:argType="com.exomind.albums.buisness.model.Album" />
     </fragment>
 
 </navigation>
