@@ -1,14 +1,14 @@
 package com.exomind.albums.ui.splash
 
 import androidx.lifecycle.LiveData
-import com.exomind.albums.presentation.coreview.BaseViewModel
-import com.exomind.albums.presentation.coreview.SingleLiveEvent
+import com.exomind.albums.ui.core.BaseViewModel
+import com.exomind.albums.ui.core.SingleLiveEvent
 import io.reactivex.Single
 import io.reactivex.functions.Consumer
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-class SplashViewModel  @Inject constructor(): BaseViewModel(){
+class SplashViewModel @Inject constructor() : BaseViewModel() {
 
 
     private val _singleLiveData = SingleLiveEvent<Navigation>()

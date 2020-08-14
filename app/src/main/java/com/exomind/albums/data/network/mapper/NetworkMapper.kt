@@ -1,4 +1,4 @@
-package com.exomind.albums.data.mapper
+package com.exomind.albums.data.network.mapper
 
 import com.exomind.albums.buisness.model.Album
 import com.exomind.albums.buisness.model.Photo
@@ -7,7 +7,7 @@ import com.exomind.albums.data.model.AlbumDto
 import com.exomind.albums.data.model.PhotoDto
 import com.exomind.albums.data.model.UserDto
 
-class AlbumsMapper {
+class NetworkMapper {
 
     /***map users ***/
     private fun mapUser(userDto: UserDto): User {
@@ -23,16 +23,8 @@ class AlbumsMapper {
         }
     }
 
-    fun mapListUsers(usersDto: List<UserDto>): List<User> {
-        return usersDto.map { mapUser(it) }
-    }
-
-    /**
-     * filter list of users returned by user
-     * return only the users wich have Id not null and name not null
-     */
-    fun filterUsersDto(usersDto: List<UserDto>): List<UserDto> {
-        return usersDto.filter { it.id != null && it.name != null }
+    fun mapUsers(usersDto: List<UserDto>): List<User> {
+        return usersDto.filter { it.id != null && it.name != null }.map { mapUser(it) }
     }
 
     /***map users ***/

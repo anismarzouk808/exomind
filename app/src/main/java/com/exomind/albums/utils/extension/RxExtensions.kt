@@ -1,4 +1,4 @@
-package com.exomind.albums.misc.extension
+package com.exomind.albums.utils.extension
 
 import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers

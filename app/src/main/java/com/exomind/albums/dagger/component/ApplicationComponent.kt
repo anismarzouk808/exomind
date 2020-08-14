@@ -13,10 +13,6 @@ import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 
-/**
- * Created on 2019-05-03 by cyrilicard
- *
- */
 @Singleton
 @Component(
     modules = [

@@ -96,4 +96,6 @@ dependencies {
     //Coil
     implementation "io.coil-kt:coil:$versions.coil"
 
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
+
 }

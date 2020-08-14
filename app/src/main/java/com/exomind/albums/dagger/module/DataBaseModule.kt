@@ -2,7 +2,6 @@ package com.exomind.albums.dagger.module
 
 import android.content.Context
 import androidx.room.Room
-import com.exomind.albums.AlbumsApplication
 import com.exomind.albums.data.persistance.AppDatabase
 import com.exomind.albums.data.persistance.dao.AlbumDao
 import com.exomind.albums.data.persistance.dao.PhotosDao
@@ -24,7 +23,7 @@ class DataBaseModule {
 
     @Provides
     fun provideUserDao(appDataBase: AppDatabase): UserDao {
-        return appDataBase.usersDaoDao()
+        return appDataBase.usersDao()
     }
 
     @Provides

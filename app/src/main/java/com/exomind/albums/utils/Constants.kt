@@ -1,5 +1,3 @@
-package com.exomind.albums.misc
+package com.exomind.albums.utils
 
-object Constants {
-
-}
+object Constants

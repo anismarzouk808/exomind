@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.exomind.albums.R
 import com.exomind.albums.buisness.model.Album
-import com.exomind.albums.misc.extension.inflate
+import com.exomind.albums.utils.extension.inflate
 
 class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
 

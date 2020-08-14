@@ -1,4 +1,4 @@
-package com.exomind.albums.presentation.coreview
+package com.exomind.albums.ui.core
 
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigator

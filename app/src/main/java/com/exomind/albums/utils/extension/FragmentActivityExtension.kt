@@ -1,4 +1,4 @@
-package com.exomind.albums.misc.extension
+package com.exomind.albums.utils.extension
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

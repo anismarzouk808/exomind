@@ -1,4 +1,4 @@
-package com.exomind.albums.misc.extension
+package com.exomind.albums.utils.extension
 
 import android.app.Activity
 import android.content.Context
@@ -9,8 +9,8 @@ import android.view.inputmethod.InputMethodManager
 import androidx.annotation.LayoutRes
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
-import com.exomind.albums.presentation.coreview.DataWrapper
-import com.exomind.albums.presentation.coreview.Loading
+import com.exomind.albums.ui.core.DataWrapper
+import com.exomind.albums.ui.core.Loading
 
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false): View {

@@ -17,9 +17,8 @@ interface AlbumsApiService {
     @GET("users/{userId}/albums")
     fun getAlbums(@Path("userId") userId : Int): Single<List<AlbumDto>>
 
-    @GET("users/{userId}/photos")
+    @GET("users/1/photos")
     fun getAlbumPhotos(
-        @Path("userId") userId : Int,
         @Query("albumId") albumId : Int
     ) : Single<List<PhotoDto>>
 
