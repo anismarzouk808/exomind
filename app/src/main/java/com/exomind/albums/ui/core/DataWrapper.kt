@@ -1,4 +1,4 @@
-package com.exomind.albums.presentation.coreview
+package com.exomind.albums.ui.core
 
 sealed class DataWrapper<out T>
 

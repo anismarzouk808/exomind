@@ -1,4 +1,4 @@
-package com.exomind.albums.presentation.coreview
+package com.exomind.albums.ui.core
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.exomind.albums.dagger.factory.AppViewModelFactory
 import com.exomind.albums.ui.main.MainActivity
-import com.exomind.albums.misc.extension.vm
+import com.exomind.albums.utils.extension.vm
 import dagger.android.support.DaggerFragment
 import kotlin.reflect.KClass
 

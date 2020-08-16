@@ -17,7 +17,7 @@ abstract class AppDatabase : RoomDatabase() {
         const val VERSION = 1
     }
 
-    abstract fun usersDaoDao(): UserDao
+    abstract fun usersDao(): UserDao
     abstract fun albumsDao(): AlbumDao
     abstract fun photosDao(): PhotosDao
 }

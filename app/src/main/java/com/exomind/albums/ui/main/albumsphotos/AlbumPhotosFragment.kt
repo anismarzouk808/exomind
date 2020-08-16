@@ -8,23 +8,23 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.exomind.albums.R
-import com.exomind.albums.presentation.coreview.BaseFragment
-import com.exomind.albums.presentation.coreview.Failure
-import com.exomind.albums.presentation.coreview.Loading
-import com.exomind.albums.presentation.coreview.Success
+import com.exomind.albums.ui.core.BaseFragment
+import com.exomind.albums.ui.core.Failure
+import com.exomind.albums.ui.core.Loading
+import com.exomind.albums.ui.core.Success
 
 class AlbumPhotosFragment : BaseFragment<AlbumPhotosViewModel>(
     AlbumPhotosViewModel::class,
     R.layout.fragment_album_photos
-){
+) {
 
-    private lateinit var photosList : RecyclerView
+    private lateinit var photosList: RecyclerView
     private val photosAdapter by lazy { AlbumPhotosAdapter() }
     private val args: AlbumPhotosFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setToolbarTitle(args.album.title,true)
+        setToolbarTitle(args.album.title, true)
         intiView()
         setUpRecyclerView()
         observeData()
@@ -33,7 +33,7 @@ class AlbumPhotosFragment : BaseFragment<AlbumPhotosViewModel>(
 
     private fun intiView() {
         view?.apply {
-            photosList  = findViewById(R.id.album_photos_list)
+            photosList = findViewById(R.id.album_photos_list)
         }
     }
 
@@ -50,15 +50,15 @@ class AlbumPhotosFragment : BaseFragment<AlbumPhotosViewModel>(
                 when (dataWrapper) {
                     is Success -> {
                         photosAdapter.items = dataWrapper.data
-                        toggleError(false,null)
+                        toggleError(false, null)
                     }
-                    is Failure ->{
-                        toggleError(true,dataWrapper.throwable?.message)
+                    is Failure -> {
+                        toggleError(true, dataWrapper.throwable?.message)
                     }
 
                     is Loading -> {
                         toggleLoading(dataWrapper.loading)
-                        toggleError(false,null)
+                        toggleError(false, null)
                     }
                 }
             })
@@ -66,7 +66,12 @@ class AlbumPhotosFragment : BaseFragment<AlbumPhotosViewModel>(
     }
 
     class AlbumPhotosItemDecoration(private val spaceHeight: Int) : RecyclerView.ItemDecoration() {
-        override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+        override fun getItemOffsets(
+            outRect: Rect,
+            view: View,
+            parent: RecyclerView,
+            state: RecyclerView.State
+        ) {
             outRect.top = spaceHeight
         }
     }

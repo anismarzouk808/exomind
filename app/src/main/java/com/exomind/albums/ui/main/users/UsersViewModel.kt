@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.exomind.albums.buisness.model.User
 import com.exomind.albums.data.datamanager.IAlbumsDataManger
-import com.exomind.albums.misc.extension.setLoadingState
-import com.exomind.albums.presentation.coreview.*
+import com.exomind.albums.ui.core.*
+import com.exomind.albums.utils.extension.setLoadingState
 import io.reactivex.functions.Consumer
 import javax.inject.Inject
 
@@ -21,6 +21,7 @@ class UsersViewModel @Inject constructor(private val dataManager: IAlbumsDataMan
         _usersLiveData.setLoadingState(true)
         dataManager.loadUsers().sub(
             onSuccess = Consumer {
+                dataManager.insertUsers(it).sub()
                 _usersLiveData.setLoadingState(false)
                 _usersLiveData.postValue(Success(it))
                 users = it

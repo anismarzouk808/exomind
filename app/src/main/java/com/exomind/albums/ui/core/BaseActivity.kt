@@ -1,12 +1,11 @@
-package com.exomind.albums.presentation.coreview
+package com.exomind.albums.ui.core
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.LayoutRes
-import com.exomind.albums.dagger.factory.AppViewModelFactory
 import com.exomind.albums.R
+import com.exomind.albums.dagger.factory.AppViewModelFactory
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 

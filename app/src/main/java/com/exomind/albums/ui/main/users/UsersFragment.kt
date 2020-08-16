@@ -7,12 +7,12 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.exomind.albums.R
-import com.exomind.albums.misc.extension.hideKeyboard
+import com.exomind.albums.utils.extension.hideKeyboard
 import com.exomind.albums.utils.extension.onTextChangedListener
-import com.exomind.albums.presentation.coreview.BaseFragment
-import com.exomind.albums.presentation.coreview.Failure
-import com.exomind.albums.presentation.coreview.Loading
-import com.exomind.albums.presentation.coreview.Success
+import com.exomind.albums.ui.core.BaseFragment
+import com.exomind.albums.ui.core.Failure
+import com.exomind.albums.ui.core.Loading
+import com.exomind.albums.ui.core.Success
 
 class UsersFragment : BaseFragment<UsersViewModel>(
     UsersViewModel::class,
