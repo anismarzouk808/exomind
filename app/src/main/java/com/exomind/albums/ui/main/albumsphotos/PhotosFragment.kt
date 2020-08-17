@@ -13,14 +13,14 @@ import com.exomind.albums.ui.core.Failure
 import com.exomind.albums.ui.core.Loading
 import com.exomind.albums.ui.core.Success
 
-class AlbumPhotosFragment : BaseFragment<AlbumPhotosViewModel>(
-    AlbumPhotosViewModel::class,
+class PhotosFragment : BaseFragment<PhotosViewModel>(
+    PhotosViewModel::class,
     R.layout.fragment_album_photos
 ) {
 
     private lateinit var photosList: RecyclerView
-    private val photosAdapter by lazy { AlbumPhotosAdapter() }
-    private val args: AlbumPhotosFragmentArgs by navArgs()
+    private val photosAdapter by lazy { PhotosAdapter() }
+    private val args: PhotosFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

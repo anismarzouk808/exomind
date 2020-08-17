@@ -14,7 +14,7 @@ import com.exomind.albums.utils.extension.setLoadingState
 import io.reactivex.functions.Consumer
 import javax.inject.Inject
 
-class AlbumPhotosViewModel @Inject constructor(private val dataManager: IAlbumsDataManger) :
+class PhotosViewModel @Inject constructor(private val dataManager: IAlbumsDataManger) :
     BaseViewModel() {
     private val _photosLiveData = MutableLiveData<DataWrapper<List<Photo>>>()
     val photosLiveData: LiveData<DataWrapper<List<Photo>>> get() = _photosLiveData

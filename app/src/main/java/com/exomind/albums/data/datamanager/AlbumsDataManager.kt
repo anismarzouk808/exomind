@@ -42,7 +42,7 @@ class AlbumsDataManager(
     override fun loadPhotos(albumId: Int): Single<List<Photo>> {
         return dataBase.photosDao().getPhotos(albumId).flatMap { photos ->
             if (photos.isEmpty()) networkProvider.getPhotos(albumId)
-            else Single.fromCallable{ NetworkMapper().mapAlbumPhoto(photos)}
+            else Single.fromCallable{ NetworkMapper().mapPhotos(photos)}
         }
     }
 

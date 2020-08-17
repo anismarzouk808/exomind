@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.exomind.albums.dagger.factory.AppViewModelFactory
 import com.exomind.albums.dagger.annotation.ViewModelKey
 import com.exomind.albums.ui.main.albums.AlbumViewModel
-import com.exomind.albums.ui.main.albumsphotos.AlbumPhotosViewModel
+import com.exomind.albums.ui.main.albumsphotos.PhotosViewModel
 import com.exomind.albums.ui.main.users.UsersViewModel
 import com.exomind.albums.ui.splash.SplashViewModel
 import dagger.Binds
@@ -35,7 +35,7 @@ internal abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(AlbumPhotosViewModel::class)
-    internal abstract fun provideAlbumPhotosViewModel(splashViewModel: AlbumPhotosViewModel): ViewModel
+    @ViewModelKey(PhotosViewModel::class)
+    internal abstract fun provideAlbumPhotosViewModel(splashViewModel: PhotosViewModel): ViewModel
 
 }

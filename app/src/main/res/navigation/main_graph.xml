@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/albumPhotosFragment"
-        android:name="com.exomind.albums.ui.main.albumsphotos.AlbumPhotosFragment"
+        android:name="com.exomind.albums.ui.main.albumsphotos.PhotosFragment"
         android:label="fragment_album_photos"
         tools:layout="@layout/fragment_album_photos" >
         <argument

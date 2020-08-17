@@ -1,7 +1,7 @@
 package com.exomind.albums.dagger.module
 
 import com.exomind.albums.ui.main.albums.AlbumsFragment
-import com.exomind.albums.ui.main.albumsphotos.AlbumPhotosFragment
+import com.exomind.albums.ui.main.albumsphotos.PhotosFragment
 import com.exomind.albums.ui.main.users.UsersFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -17,5 +17,5 @@ abstract class FragmentBindingModule{
     internal abstract fun contributeAlbumsFragment(): AlbumsFragment
 
     @ContributesAndroidInjector
-    internal abstract fun contributeAlbumPhotosFragment(): AlbumPhotosFragment
+    internal abstract fun contributeAlbumPhotosFragment(): PhotosFragment
 }

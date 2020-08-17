@@ -18,7 +18,7 @@ class AlbumsApiProvider(private val apiService: AlbumsApiService) : IAlbumsApiPr
 
     override fun getPhotos(albumId : Int): Single<List<Photo>> {
         return apiService.getAlbumPhotos(albumId).map {
-            NetworkMapper().mapAlbumPhoto(it)
+            NetworkMapper().mapPhotos(it)
         }
     }
 }

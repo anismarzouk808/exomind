@@ -10,7 +10,7 @@ import com.exomind.albums.R
 import com.exomind.albums.buisness.model.Photo
 import com.exomind.albums.utils.extension.inflate
 
-class AlbumPhotosAdapter : RecyclerView.Adapter<AlbumPhotosAdapter.ViewHolder>() {
+class PhotosAdapter : RecyclerView.Adapter<PhotosAdapter.ViewHolder>() {
 
     var items = emptyList<Photo>()
         set(value) {
