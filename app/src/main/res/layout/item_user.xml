@@ -4,14 +4,15 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="15dp">
+    android:padding="@dimen/item_list_padding"
+    android:background="@drawable/bg_item_list">
 
     <TextView
         android:id="@+id/name_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="left"
+        android:gravity="start"
         android:textSize="20sp"
         tools:text="Anis MARZOUK"
         android:typeface="serif"
